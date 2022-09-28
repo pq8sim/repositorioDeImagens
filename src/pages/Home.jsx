@@ -1,11 +1,10 @@
-
-import { Text, View } from "react-native";
-import { fetchNewData } from "../api/api";
+import React from 'react'
+import { Text, View } from "react-native"
 
 export default function Home(){
     return(
         <View>
             <Text>Hello world</Text>
         </View>
-    );
+    )
 }

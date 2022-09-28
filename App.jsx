@@ -1,4 +1,4 @@
-import Navigation from "./src/routes/routes"
+import Navigation from "./src/routes/Navigation"
 
 
 export default function App(){
