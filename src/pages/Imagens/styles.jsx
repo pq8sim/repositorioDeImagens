@@ -2,7 +2,8 @@ import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
     texto: {
-        marginLeft: '50px'
+        // marginLeft: '50px',
+        textAlign: 'center'
     },
     card: {
         height: 'auto',
@@ -26,8 +27,8 @@ export default StyleSheet.create({
         backgroundColor: '#C0C0C0',
         borderRadius: '4px',
         border: 'none',
-        marginTop: '16px',
-        marginBottom: '20px',
+        marginTop: '40px',
+        marginBottom: '24px',
         padding: '4px',
     },
     descri: {

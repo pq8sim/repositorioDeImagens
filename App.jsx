@@ -1,8 +1,7 @@
-import { View } from "react-native";
-import Navigation from "./src/routes/Navigation";
+import Imagens from "./src/pages/Imagens";
 
 export default function App() {
   return (
-      <Navigation />
+    <Imagens />
   )
 }
