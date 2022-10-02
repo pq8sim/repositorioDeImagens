@@ -2,7 +2,6 @@ import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
     texto: {
-        // marginLeft: '50px',
         textAlign: 'center'
     },
     card: {

@@ -7,11 +7,13 @@ import api from '../../api/api'
 import styles from './styles'
 
 export default function Imagens() {
+    // variável publica, para poder acessar a API
     const CLIENTE_ID = "vFt3WJN6Xbre0Rgg_Byz_Pyvtm_ek653SoOmjDsDtwo"
 
     const [imagens, setImagens] = useState([])
     const [pesquisa, setPesquisa] = useState('')
 
+    // o caminho, com os dados, que desejo estar buscando e a chave de validação no final
     useEffect(() => {
         api.get(`search/photos?query=${pesquisa}&client_id=${CLIENTE_ID}`).then(response => {
             setImagens(response.data.results);
@@ -20,6 +22,7 @@ export default function Imagens() {
 
     return (
         <>
+        {/* input para estar recebendo o texto de pesquisa */}
             <TextInput type="text"
                 values={pesquisa}
                 onChange={e => setPesquisa(e.target.value)}
@@ -33,6 +36,7 @@ export default function Imagens() {
                                 style={styles.img}
                             />
                             <View style={styles.descri}>
+                                {/* validações feitas para não exebir se for null */}
                                 {img.alt_description != null ?
                                     <Text>
                                         <Text style={styles.strong}>
@@ -80,8 +84,10 @@ export default function Imagens() {
                         </View>
                     </View>
                 ))
+                // texto mostrado se não ouver pesquisa
                 : <Text style={styles.texto}>Pesquise algo.</Text>
             }
+            {/* mostrar uma mensagem se não char o que foi pesquisado */}
             {(pesquisa !== '' && imagens == 0) ?
                 <Text style={styles.texto}>Não encontramos nenhuma imagem. 🥺</Text>
                 : null}
